@@ -1,0 +1,557 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"1 C:\Users\ABC\MPLABXProjects\EEPROM.X/eeprom.h
+[v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
+"8
+[v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+"2 C:\Users\ABC\MPLABXProjects\EEPROM.X/keypad.h
+[v _InitKeypad InitKeypad `(v  1 e 1 0 ]
+"11
+[v _READ_SWITCHES READ_SWITCHES `(uc  1 e 1 0 ]
+"48
+[v _GetKey GetKey `(uc  1 e 1 0 ]
+"2 C:\Users\ABC\MPLABXProjects\EEPROM.X/lcd.h
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"24
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"33
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+"39
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"60
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"79
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"95
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"2 C:\Users\ABC\MPLABXProjects\EEPROM.X/moto.h
+[v _init_PWM init_PWM `(v  1 e 1 0 ]
+"10
+[v _set_Tpwm set_Tpwm `(v  1 e 1 0 ]
+"24
+[v _DC_cal DC_cal `(ui  1 e 2 0 ]
+"28
+[v _setPWM_DutyCycle setPWM_DutyCycle `(v  1 e 1 0 ]
+"36
+[v _Dong Dong `(v  1 e 1 0 ]
+"42
+[v _Mo Mo `(v  1 e 1 0 ]
+"48
+[v _Dung Dung `(v  1 e 1 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+[v i1___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+[v i1___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+[v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"47 C:\Users\ABC\MPLABXProjects\EEPROM.X\eeprom.c
+[v _main main `(v  1 e 1 0 ]
+"363
+[v _ISR ISR `II(v  1 e 1 0 ]
+"426
+[v _nguoi nguoi `(v  1 e 1 0 ]
+"166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"892
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"1255
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2288
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2295
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+[s S36 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"2331
+[u S43 . 1 `S36 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES43  1 e 1 @396 ]
+"2361
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2446
+[v _CCP1M2 CCP1M2 `VEb  1 e 0 @186 ]
+"2449
+[v _CCP1M3 CCP1M3 `VEb  1 e 0 @187 ]
+"2452
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"2455
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"2560
+[v _EEPGD EEPGD `VEb  1 e 0 @3175 ]
+"2569
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2602
+[v _INTEDG INTEDG `VEb  1 e 0 @1038 ]
+"2656
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"2674
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"2677
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2680
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2683
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"2686
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"2689
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"2692
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"2695
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"2698
+[v _RBIE RBIE `VEb  1 e 0 @91 ]
+"2701
+[v _RBIF RBIF `VEb  1 e 0 @88 ]
+"2704
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2707
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2716
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2719
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2722
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"2725
+[v _RC7 RC7 `VEb  1 e 0 @63 ]
+"2749
+[v _RD0 RD0 `VEb  1 e 0 @64 ]
+"2752
+[v _RD1 RD1 `VEb  1 e 0 @65 ]
+"2755
+[v _RD2 RD2 `VEb  1 e 0 @66 ]
+"2758
+[v _RD3 RD3 `VEb  1 e 0 @67 ]
+"2761
+[v _RD4 RD4 `VEb  1 e 0 @68 ]
+"2764
+[v _RD5 RD5 `VEb  1 e 0 @69 ]
+"2767
+[v _RD6 RD6 `VEb  1 e 0 @70 ]
+"2770
+[v _RD7 RD7 `VEb  1 e 0 @71 ]
+"2872
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
+"2875
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
+"2902
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"2965
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"3046
+[v _WR WR `VEb  1 e 0 @3169 ]
+"26 C:\Users\ABC\MPLABXProjects\EEPROM.X\eeprom.c
+[v _Fpwm Fpwm `ul  1 e 4 0 ]
+"27
+[v _ps ps `uc  1 e 1 0 ]
+"41
+[v _pass pass `[0]uc  1 e 0 0 ]
+"42
+[v _counter counter `i  1 e 2 0 ]
+"43
+[v _trangthai trangthai `i  1 e 2 0 ]
+"44
+[v _tt tt `i  1 e 2 0 ]
+"45
+[v _counter1 counter1 `i  1 e 2 0 ]
+"47
+[v _main main `(v  1 e 1 0 ]
+{
+"304
+[v main@data data `uc  1 a 1 28 ]
+"302
+[v main@i_221 i `uc  1 a 1 41 ]
+"278
+[v main@x_216 x `uc  1 a 1 26 ]
+"149
+[v main@x x `uc  1 a 1 23 ]
+"336
+[v main@down1_226 down1 `uc  1 a 1 29 ]
+"276
+[v main@i_215 i `i  1 a 2 39 ]
+"147
+[v main@i i `i  1 a 2 37 ]
+"297
+[v main@x2 x2 `i  1 a 2 34 ]
+"295
+[v main@check check `i  1 a 2 30 ]
+"296
+[v main@x_219 x `uc  1 a 1 27 ]
+"272
+[v main@c2_213 c2 `i  1 a 2 19 ]
+"273
+[v main@c1_214 c1 `uc  1 a 1 25 ]
+"267
+[v main@down1_211 down1 `uc  1 a 1 16 ]
+"207
+[v main@down1_201 down1 `uc  1 a 1 24 ]
+"143
+[v main@c2 c2 `i  1 a 2 17 ]
+"144
+[v main@c1 c1 `uc  1 a 1 22 ]
+"136
+[v main@down1 down1 `uc  1 a 1 21 ]
+"73
+[v main@check4 check4 `uc  1 a 1 36 ]
+"64
+[v main@check2 check2 `i  1 a 2 50 ]
+"65
+[v main@check3 check3 `i  1 a 2 48 ]
+"63
+[v main@check1 check1 `i  1 a 2 46 ]
+"62
+[v main@down down `i  1 a 2 44 ]
+"66
+[v main@check5 check5 `i  1 a 2 42 ]
+"67
+[v main@check6 check6 `i  1 a 2 32 ]
+"61
+[v main@Key Key `uc  1 a 1 52 ]
+"362
+} 0
+"10 C:\Users\ABC\MPLABXProjects\EEPROM.X/moto.h
+[v _set_Tpwm set_Tpwm `(v  1 e 1 0 ]
+{
+"22
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 24 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 23 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 14 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 22 ]
+"44
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 48 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 41 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 46 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 53 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 52 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 45 ]
+"8
+[v ___fldiv@a a `d  1 p 4 28 ]
+[v ___fldiv@b b `d  1 p 4 32 ]
+"185
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 73 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 72 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 71 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 70 ]
+"10
+[v ___fladd@b b `d  1 p 4 54 ]
+[v ___fladd@a a `d  1 p 4 58 ]
+"237
+} 0
+"2 C:\Users\ABC\MPLABXProjects\EEPROM.X/moto.h
+[v _init_PWM init_PWM `(v  1 e 1 0 ]
+{
+"8
+} 0
+"95 C:\Users\ABC\MPLABXProjects\EEPROM.X/lcd.h
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"97
+[v Lcd_Write_String@i i `i  1 a 2 5 ]
+"95
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"98
+[v Lcd_Write_String@a a `*.24uc  1 a 1 7 ]
+"100
+} 0
+"79
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"81
+[v Lcd_Write_Char@y y `uc  1 a 1 3 ]
+[v Lcd_Write_Char@temp temp `uc  1 a 1 2 ]
+"79
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"82
+[v Lcd_Write_Char@a a `uc  1 a 1 4 ]
+"93
+} 0
+"39
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"41
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 10 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 9 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 8 ]
+"39
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"42
+[v Lcd_Set_Cursor@a a `uc  1 a 1 7 ]
+"58
+} 0
+"60
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"77
+} 0
+"33
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+{
+"37
+} 0
+"24
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"26
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"31
+} 0
+"2
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+"4
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"23
+} 0
+"2 C:\Users\ABC\MPLABXProjects\EEPROM.X/keypad.h
+[v _InitKeypad InitKeypad `(v  1 e 1 0 ]
+{
+"9
+} 0
+"48
+[v _GetKey GetKey `(uc  1 e 1 0 ]
+{
+"50
+[v GetKey@key key `uc  1 a 1 4 ]
+"54
+} 0
+"11
+[v _READ_SWITCHES READ_SWITCHES `(uc  1 e 1 0 ]
+{
+"46
+} 0
+"8 C:\Users\ABC\MPLABXProjects\EEPROM.X/eeprom.h
+[v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+{
+[v EEPROM_Write@Address Address `uc  1 a 1 wreg ]
+[v EEPROM_Write@Address Address `uc  1 a 1 wreg ]
+[v EEPROM_Write@Data Data `uc  1 p 1 0 ]
+[v EEPROM_Write@Address Address `uc  1 a 1 1 ]
+"21
+} 0
+"1
+[v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
+{
+[v EEPROM_Read@Address Address `uc  1 a 1 wreg ]
+[v EEPROM_Read@Address Address `uc  1 a 1 wreg ]
+[v EEPROM_Read@Address Address `uc  1 a 1 0 ]
+"6
+} 0
+"363 C:\Users\ABC\MPLABXProjects\EEPROM.X\eeprom.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"425
+} 0
+"426
+[v _nguoi nguoi `(v  1 e 1 0 ]
+{
+"430
+} 0
+"42 C:\Users\ABC\MPLABXProjects\EEPROM.X/moto.h
+[v _Mo Mo `(v  1 e 1 0 ]
+{
+"47
+} 0
+"48
+[v _Dung Dung `(v  1 e 1 0 ]
+{
+"52
+} 0
+"36
+[v _Dong Dong `(v  1 e 1 0 ]
+{
+"41
+} 0
+"28
+[v _setPWM_DutyCycle setPWM_DutyCycle `(v  1 e 1 0 ]
+{
+[v setPWM_DutyCycle@DC DC `ui  1 p 2 62 ]
+"34
+} 0
+"24
+[v _DC_cal DC_cal `(ui  1 e 2 0 ]
+{
+[v DC_cal@DC DC `ui  1 p 2 52 ]
+"26
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\xxtofl.c
+[v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v i1___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v i1___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v i1___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v i1___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v i1___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v i1___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\fltol.c
+[v i1___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v i1___fltol@exp1 exp1 `uc  1 a 1 36 ]
+[v i1___fltol@sign1 sign1 `uc  1 a 1 35 ]
+"43
+[v i1___fltol@f1 f1 `d  1 p 4 26 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcdiv.c
+[v i1___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v i1___fldiv@grs grs `ul  1 a 4 20 ]
+"22
+[v i1___fldiv@rem rem `ul  1 a 4 13 ]
+"20
+[v i1___fldiv@new_exp new_exp `i  1 a 2 18 ]
+"19
+[v i1___fldiv@aexp aexp `uc  1 a 1 25 ]
+"18
+[v i1___fldiv@bexp bexp `uc  1 a 1 24 ]
+"16
+[v i1___fldiv@sign sign `uc  1 a 1 17 ]
+"8
+[v i1___fldiv@a a `d  1 p 4 0 ]
+[v i1___fldiv@b b `d  1 p 4 4 ]
+"185
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S523 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S528 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S531 . 4 `l 1 i 4 0 `d 1 f 4 0 `S523 1 fAsBytes 4 0 `S528 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S531  1 a 4 46 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 40 ]
+[s S600 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S603 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S600 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S603  1 a 2 50 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 45 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 44 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 39 ]
+"8
+[v ___flmul@b b `d  1 p 4 26 ]
+[v ___flmul@a a `d  1 p 4 30 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
